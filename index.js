@@ -26,7 +26,7 @@ searchBtn.addEventListener("click", () => {
                 let returnedWordArray = data
                 for (let wordBank = 0; wordBank < returnedWordArray.length; wordBank++) {
                     phoneticDiv.innerHTML += `
-                    <div><h1>${returnedWordArray[wordBank].word}<span>${wordBank + 1}</span></h1></div>
+                    <div><h1 class="blue-text lighten-1">${returnedWordArray[wordBank].word}<span>${wordBank + 1}</span></h1></div>
                     `
                     if (returnedWordArray[wordBank].phonetic != true) {
                         phoneticDiv.innerHTML += ""
