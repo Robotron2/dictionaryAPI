@@ -14,15 +14,27 @@ searchBtn.addEventListener("click", () => {
         console.log("Field cannot be empty")
     } else {
         fetch(searchUrl)
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    phoneticDiv.innerHTML = "Enter English words only";
+                }
+            })
             .then((data) => {
                 // console.log(data)
                 let returnedWordArray = data
                 for (let wordBank = 0; wordBank < returnedWordArray.length; wordBank++) {
                     phoneticDiv.innerHTML += `
                     <div><h1>${returnedWordArray[wordBank].word}<span>${wordBank + 1}</span></h1></div>
-                    <div><h1>${returnedWordArray[wordBank].phonetic}</h1></div>
                     `
+                    if (returnedWordArray[wordBank].phonetic != true) {
+                        phoneticDiv.innerHTML += ""
+                    } else if (returnedWordArray[wordBank].phonetic == true) {
+
+                    } {
+                        phoneticDiv.innerHTML += `<div><h1>${returnedWordArray[wordBank].phonetic}</h1></div>`
+                    }
                     let meaningsArray = returnedWordArray[wordBank].meanings
 
                     for (let meaning = 0; meaning < meaningsArray.length; meaning++) {
