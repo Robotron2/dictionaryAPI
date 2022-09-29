@@ -45,7 +45,7 @@ searchBtn.addEventListener("click", () => {
                         phoneticDiv.innerHTML += `<h4><em>definitions</em></h4>`
                         for (let definition = 0; definition < definitionsArray.length; definition++) {
                             phoneticDiv.innerHTML += `
-                            <div><em>${definition + 1}.</em><p>${definitionsArray[definition].definition}</p></div><br>
+                            <div><em>${definition + 1}.</em><h6>${definitionsArray[definition].definition}</h6></div><br>
                             `
                         }
                         let synonymsArray = returnedWordArray[wordBank].meanings[meaning].synonyms
