@@ -16,7 +16,7 @@ yearText.innerHTML = currentYear;
 // console.log(wordList.length);
 
 const clearError = () => {
-	errorDiv.innerHTML;
+	errorDiv.innerHTML = "";
 };
 
 searchBtn.addEventListener("click", () => {
@@ -30,6 +30,7 @@ searchBtn.addEventListener("click", () => {
 	if (userInput.value == "") {
 		console.log("Field cannot be empty");
 		errorDiv.innerHTML = `<p>Field cannot be empty</p>`;
+		setTimeout(clearError, 1000);
 	} else {
 		fetch(searchUrl)
 			.then((response) => {
