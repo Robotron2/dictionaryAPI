@@ -38,7 +38,7 @@ searchBtn.addEventListener("click", () => {
 				for (let wordBank = 0; wordBank < returnedWordArray.length; wordBank++) {
 					phoneticDiv.innerHTML += `
                     
-                    <div class ="myclass"><h1 class="blue-text lighten-1">${returnedWordArray[wordBank].word}<span><em>${wordBank + 1}</em></span></h1></div>
+                    <div class ="myclass"><h3 class="blue-text lighten-1">${returnedWordArray[wordBank].word}<span><em>${wordBank + 1}</em></span></h3></div>
                     
                     `;
 
@@ -115,7 +115,7 @@ shuffleBtn.addEventListener("click", () => {
 					phoneticDiv.innerHTML = "Enter English words only";
 				}
 			})
-
+			// str.charAt(0).toUpperCase() + str.slice(1)
 			.then((data) => {
 				// console.log(data)
 
@@ -124,7 +124,9 @@ shuffleBtn.addEventListener("click", () => {
 				for (let wordBank = 0; wordBank < returnedWordArray.length; wordBank++) {
 					phoneticDiv.innerHTML += `
                     
-                    <div class ="myclass"><h1 class="blue-text lighten-1">${returnedWordArray[wordBank].word}<span><em>${wordBank + 1}</em></span></h1></div>
+                    <div class ="myclass"><h3 class="blue-text lighten-1">${returnedWordArray[wordBank].word.charAt(0).toUpperCase() + returnedWordArray[wordBank].word.slice(1)}<span><em>${
+						wordBank + 1
+					}</em></span></h3></div>
                     
                     `;
 
