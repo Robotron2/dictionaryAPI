@@ -64,4 +64,21 @@ searchBtn.addEventListener("click", () => {
 	userInput.value = "";
 });
 
+//Navbar
+
 // fetch the URL, find the sound, play the sound
+
+(function ($) {
+	$(function () {
+		$(".sidenav").sidenav();
+	}); // end of document ready
+})(jQuery); // end of jQuery name space
+
+//Preloader
+
+const preloader = document.querySelector("#preloader");
+if (preloader) {
+	window.addEventListener("load", () => {
+		preloader.remove();
+	});
+}
