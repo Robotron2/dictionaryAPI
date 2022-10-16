@@ -8,6 +8,11 @@ let errorDiv = document.getElementById("errorDiv");
 
 let phoneticDiv = document.getElementById("phoneticDiv");
 
+//Update the copyright year using Javascript
+let yearText = document.getElementById("year");
+let currentYear = new Date().getFullYear();
+yearText.innerHTML = currentYear;
+
 // console.log(wordList.length);
 
 const clearError = () => {

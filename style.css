@@ -6,6 +6,13 @@
 body {
 	background-color: #eaf6f6;
 	padding: 0 0.5%;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
 }
 
 h4 {
@@ -34,6 +41,12 @@ h4 {
 	h3 {
 		font-size: 0.6rem;
 	}
+}
+
+/* Nav */
+.sidenav ul {
+	margin-top: 10px;
+	padding-top: 10px;
 }
 
 /*--------------------------------------------------------------
