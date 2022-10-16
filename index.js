@@ -1,8 +1,10 @@
 let userInput = document.getElementById("inputWord");
 let searchBtn = document.getElementById("search");
-let wordDiv = document.getElementById("wordDiv");
+// let wordDiv = document.getElementById("wordDiv");
 let phoneticDiv = document.getElementById("phoneticDiv");
-// let phoneticSoundBtn = document.getElementById("sounds")
+
+console.log(wordList.length);
+
 searchBtn.addEventListener("click", () => {
 	phoneticDiv.innerHTML = "";
 	let searchWord = userInput.value;
