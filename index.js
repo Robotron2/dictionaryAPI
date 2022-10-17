@@ -28,7 +28,7 @@ searchBtn.addEventListener("click", () => {
 
 	// console.log(searchUrl)
 	if (userInput.value == "") {
-		console.log("Field cannot be empty");
+		// console.log("Field cannot be empty");
 		errorDiv.innerHTML = `<p>Field cannot be empty</p>`;
 		setTimeout(clearError, 1000);
 	} else {
@@ -106,7 +106,7 @@ let randomWordIndex;
 
 shuffleBtn.addEventListener("click", () => {
 	randomWordIndex = Math.floor(Math.random() * 1952);
-	console.log(randomWordIndex);
+	// console.log(randomWordIndex);
 	console.log(wordList[randomWordIndex]);
 	let randomWord = wordList[randomWordIndex];
 	userInput.value = randomWord;
@@ -129,7 +129,8 @@ shuffleBtn.addEventListener("click", () => {
 					return response.json();
 				})
 				.then((data) => {
-					console.log(data);
+					// console.log(data);
+
 					let randomWordData = data;
 					for (let wordBank = 0; wordBank < randomWordData.length; wordBank++) {
 						phoneticDiv.innerHTML += `
@@ -182,11 +183,11 @@ shuffleBtn.addEventListener("click", () => {
 
 // fetch the URL, find the sound, play the sound
 
-(function ($) {
-	$(function () {
-		$(".sidenav").sidenav();
-	}); // end of document ready
-})(jQuery); // end of jQuery name space
+// (function ($) {
+// 	$(function () {
+// 		$(".sidenav").sidenav();
+// 	}); // end of document ready
+// })(jQuery); // end of jQuery name space
 
 // Preloader;
 
