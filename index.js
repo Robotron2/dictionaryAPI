@@ -180,7 +180,6 @@ shuffleBtn.addEventListener("click", () => {
 //Navbar
 
 // fetch the URL, find the sound, play the sound
-
 ;(function ($) {
 	$(function () {
 		$(".sidenav").sidenav()
